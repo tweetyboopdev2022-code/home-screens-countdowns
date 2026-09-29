@@ -1,7 +1,7 @@
 {
   "id": "countdowns",
   "name": "Countdowns",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Big 'days until' tiles for holidays, birthdays and trips.",
   "author": "Tanya",
   "license": "MIT",
