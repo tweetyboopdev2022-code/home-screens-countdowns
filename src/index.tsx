@@ -20,7 +20,7 @@ export default function Countdowns({ config, style, timezone: tz }: PluginCompon
   const fs = Number(style?.fontSize) || 18;
   // Only as many tiles as fit comfortably side by side (≥ ~5.5em each).
   const low = size.h > 0 && size.h < fs * 6.5;
-  const fitCount = size.w ? Math.max(1, Math.floor((size.w + fs * 0.6) / (fs * (low ? 10 : 6.2)))) : 4;
+  const fitCount = size.w ? Math.max(1, Math.floor((size.w + fs * 0.6) / Math.max(low ? 190 : 120, fs * (low ? 10 : 6.2)))) : 4;
   const list = nextOccurrences(String(config.items ?? ''), dayKey(now, tz)).slice(0, Math.min(Number(config.max ?? 3), fitCount));
   // Short blocks: number beside the name instead of above it.
 
